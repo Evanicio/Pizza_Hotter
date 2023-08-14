@@ -1,8 +1,12 @@
 * {
     box-sizing: border-box;
 }
+/* Adicionando uma imgam de fundo */
 body {
     background-color:#EEE;
+    background-image: url('./images/fachadaComercial.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
     font-family:'Lato',Helvetica,Arial;
     font-size:15px;
     display:flex;
@@ -57,9 +61,16 @@ aside.show {
 main {
     flex:1;
     padding:20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 h1 {
     font-family:'Hepta Slab', Helvetica, Arial;
+    color: rgb(53, 122, 190);
+    text-align: center;
+    font-size: 50px;
+    text-shadow:7px 5px  5px  rgb(206, 167, 167);
+
 }
 .pizza-area {
     display:grid;
@@ -106,7 +117,13 @@ h1 {
 }
 .pizza-item--price {
     font-size:15px;
-    color:#333;
+   color:rgb(252, 252, 252);
+   border-radius: 10px;
+   /* 
+   Modificado a cor e tamanho cor e bg color 
+   */
+   width: 220px;
+   background-color: #315970;
     margin-top:5px;
 }
 .pizza-item--name {
@@ -117,8 +134,22 @@ h1 {
 }
 .pizza-item--desc {
     font-size:13px;
-    color:#555;
+    color: rgb(71, 51, 158);
+    font-weight: bold;
+    background-color: rgba(207, 202, 131, 0.452);
+    border-radius: 5px;
     margin-top:10px;
+    /* 
+    Modificado cor de e adicionando um bg color  
+    */
+}
+/* 
+Adicionando um hover com trasição nao tinha mais adicionei 
+*/
+.pizza-item--desc:hover{
+    background-color: rgb(131, 141, 145);
+    transition:trasform(1-1) 2s ;
+    transition:ease-in-out 0.3s all;
 }
 
 .pizzaWindowArea {
@@ -339,6 +370,9 @@ h1 {
 @media (max-width:840px) {
     body {
         flex-direction: column;
+        background-image: url('./images/fachadaComercial.jpg');
+        background-position: 10%;
+        background-repeat: no-repeat;
     }
     .pizza-area {
         display:block;
