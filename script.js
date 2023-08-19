@@ -53,6 +53,10 @@ pizzaJson.map((item , index) => {
     });
     c('.pizza-area').append(pizzaItem);
 });
+
+//   Adicionar cancelar e aumenta pizza a quantidade
+
+
 function closeModal () {
     c('.pizzaWindowArea').style.opacity = 0 ;
     setTimeout (() => {
@@ -61,4 +65,17 @@ function closeModal () {
   };
   cs('.pizzaInfo--cancelButton, .pizzaInfo--cancelMobileButton').forEach((item) => {
     item.addEventListener('click' , closeModal);
+  });
+  c('.pizzaInfo--qtmenos').addEventListener('click' , () => {
+    if(modalQt > 1){
+      modalQt--;
+    c('.pizzaInfo--qt').innerHTML = modalQt;
+    }
+    
+    
+  });
+  c('.pizzaInfo--qtmais').addEventListener('click' , () => {
+    modalQt++;
+    c('.pizzaInfo--qt').innerHTML = modalQt;
+    
   });
