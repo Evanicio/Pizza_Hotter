@@ -191,9 +191,13 @@ h1 {
     font-size:13px;
     font-weight: bold;
     cursor:pointer;
+    
+    
 }
 .pizzaInfo--size:hover {
     background-color:#CCC;
+    transform: scale(1.1);
+    transition: all 0.2s ease-in-out;
 }
 .pizzaInfo--size.selected {
     background-color:#399ade;
