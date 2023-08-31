@@ -87,6 +87,7 @@ c('.pizzaInfo--addButton').addEventListener('click' , () => {
     size,
     qt:modalQt
   });
+  UpdateCart();
   closeModal();
 });
 // Modal do carrinho
