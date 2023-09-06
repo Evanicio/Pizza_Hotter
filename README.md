@@ -3,4 +3,4 @@ nesse projeto estou sempre atualizando, faço uma parte e treino, depois subo oq
 Observação:
 esse projeto e apenas usando as linguagem HTML CSS E JAVA SCRIPT.
 
-#Segue Para mais atualização futuras.
+#Atualizações finalizadas com sucesso.
