@@ -73,8 +73,11 @@ c('.pizzaInfo--qtmais').addEventListener('click' , () => {
 });
 
 // selecionar o tamanho da pizza
-cs('.pizzaInfo--size').forEach((size , sizeIndex) => {
-  size.addEventListener('click', (e) => {
+cs('.pizzaInfo--size').forEach((size) => {
+
+  // deletado  , sizeIndex
+// Deletado do click abaixo dentro do paramentro e
+  size.addEventListener('click', () => {
     c('.pizzaInfo--size.selected').classList.remove('selected');
     size.classList.add('selected');
   });
@@ -87,6 +90,7 @@ c('.pizzaInfo--addButton').addEventListener('click' , () => {
     size,
     qt:modalQt
   });
+  
   UpdateCart();
   closeModal();
 });
@@ -103,7 +107,7 @@ c('.menu-closer').addEventListener('click' , () => {
 
 
 // Modal carrinho de compras.
-function updadeCart () {
+function UpdateCart () {
 c('.menu-openner span').innerHTML = cart.length;
 
   if(cart.length > 0) {
@@ -132,10 +136,11 @@ c('.menu-openner span').innerHTML = cart.length;
             case 2:
               pizzaSizeName = 'G';
               break;
+              default:
       }; 
       let pizzaName = `${pizzaItem.name} (${pizzaSizeName})`;
       cartItem.querySelector('img').src = pizzaItem.img;
-      cartItem.querySelector('.cart--item-name').innerHTML = pizzaName;
+      cartItem.querySelector('.cart--item-nome').innerHTML = pizzaName;
 
       cartItem.querySelector('.cart--item--qt').innerHTML = cart[i].qt;
 
@@ -147,11 +152,11 @@ c('.menu-openner span').innerHTML = cart.length;
         } else{
           cart.splice(i,1);
         };
-        updadeCart();
+        UpdateCart();
       });
       cartItem.querySelector('.cart--item-qtmais').addEventListener('click' , () => {
         cart[i].qt++;
-        updadeCart();
+        UpdateCart();
       });
 
 
@@ -172,5 +177,3 @@ c('.menu-openner span').innerHTML = cart.length;
     c('aside').style.left = '100vw';
   };
 };
-
-updadeCart()
