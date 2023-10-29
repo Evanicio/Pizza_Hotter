@@ -74,9 +74,6 @@ c('.pizzaInfo--qtmais').addEventListener('click' , () => {
 
 // selecionar o tamanho da pizza
 cs('.pizzaInfo--size').forEach((size) => {
-
-  // deletado  , sizeIndex
-// Deletado do click abaixo dentro do paramentro e
   size.addEventListener('click', () => {
     c('.pizzaInfo--size.selected').classList.remove('selected');
     size.classList.add('selected');
