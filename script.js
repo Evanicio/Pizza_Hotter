@@ -172,3 +172,5 @@ c('.menu-openner span').innerHTML = cart.length;
     c('aside').style.left = '100vw';
   };
 };
+
+updadeCart()
